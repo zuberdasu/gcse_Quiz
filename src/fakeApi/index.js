@@ -10,26 +10,17 @@ export const user = [
 export const questions = [
   {
     question: "Which part of the CPU is responsible for making calculations?",
-    option1: "Program counter",
-    option2: "ALU",
-    option3: "Accumulator",
-    option4: "MAR",
-    correct: "option3",
+    answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+    correct: 1,
   },
   {
     question: "Which component is used to hold the BIOS?",
-    option1: "Hard Disk",
-    option2: "RAM",
-    option3: "SSD",
-    option4: "ROM",
-    correct: "option4",
+    answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+    correct: 3,
   },
   {
     question: "Which of the following is an example of an embedded system?",
-    option1: "Washing machine",
-    option2: "Laptop",
-    option3: "Desktop",
-    option4: "Games console",
-    correct: "option4",
+    answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+    correct: 0,
   },
 ];

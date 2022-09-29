@@ -7,6 +7,7 @@ import {
   DELETE_USER,
   SET_LOADING,
   ADD_USER,
+  SEND_RESULTS,
 } from "./types";
 
 const datafromDisk = getItem("store");
@@ -53,6 +54,11 @@ export function reducer(state = initialState, action) {
     case DELETE_USER: {
       const newState = { ...state, user: {} };
       storeItem("store", newState);
+      return newState;
+    }
+
+    case SEND_RESULTS: {
+      const newState = { ...state, results: action.payload };
       return newState;
     }
 
