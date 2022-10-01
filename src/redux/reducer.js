@@ -8,6 +8,7 @@ import {
   SET_LOADING,
   ADD_USER,
   SEND_RESULTS,
+  SET_TOPIC,
 } from "./types";
 
 const datafromDisk = getItem("store");
@@ -58,7 +59,16 @@ export function reducer(state = initialState, action) {
     }
 
     case SEND_RESULTS: {
-      const newState = { ...state, results: action.payload };
+      const newState = { ...state, results: action.payload, screenMode: 4 };
+      return newState;
+    }
+
+    case SET_TOPIC: {
+      const newState = {
+        ...state,
+        selectedTopic: action.payload,
+        screenMode: 3,
+      };
       return newState;
     }
 

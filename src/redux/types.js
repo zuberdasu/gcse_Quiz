@@ -5,3 +5,4 @@ export const SET_SCREEN_MODE = "SET_SCREEN_MODE";
 export const SET_LOADING = "SET_LOADING";
 
 export const SEND_RESULTS = "SEND_RESULTS";
+export const SET_TOPIC = "SET_TOPIC";

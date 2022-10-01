@@ -1,8 +1,9 @@
-import { user, questions } from "../fakeApi/index";
+import { user, topics } from "../fakeApi/index";
 
 export const initialState = {
   user,
-  questions,
+  topics,
   screenMode: 0,
   loading: true,
+  selectedTopic: "architecture",
 };

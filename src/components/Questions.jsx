@@ -4,10 +4,26 @@ import { useSelector, useDispatch } from "react-redux";
 import { SEND_RESULTS } from "../redux/types";
 
 const Questions = () => {
-  const questions = useSelector((state) => state.questions);
-  const dispatch = useDispatch();
+  const selectedTopic = useSelector((state) => state.selectedTopic);
+  const questions = useSelector((state) => state.topics);
+  let topicQuestions = {};
 
-  console.log(questions);
+  switch (selectedTopic) {
+    case "architecture":
+      topicQuestions = questions[0].architecture;
+      break;
+    case "memory":
+      topicQuestions = questions[0].memory;
+      break;
+    case "networks":
+      topicQuestions = questions[0].networks;
+      break;
+
+    default:
+      break;
+  }
+  //const questions = useSelector((state) => state.topics[0].selectedTopic);
+  const dispatch = useDispatch();
 
   const checkAnswers = (e) => {
     e.preventDefault();
@@ -15,36 +31,25 @@ const Questions = () => {
     let score = 0;
     for (let index = 0; index < e.target.elements.length; index++) {
       if (e.target.elements[index].checked) {
-        //console.log(e.target.elements[index].name);
-        //console.log(e.target.elements[index].value);
-        //console.log(e.target.elements[index].checked);
-        //console.log(questions[e.target.elements[index].name].correct);
-
-        // console.log(typeof e.target.elements[index].value);
-        // console.log(typeof questions[e.target.elements[index].name].correct);
         const questionArrayIndex = e.target.elements[index].name;
         const selectedOption = e.target.elements[index].value;
-        const correctOption = questions[e.target.elements[index].name].correct;
+        const correctOption =
+          topicQuestions[e.target.elements[index].name].correct;
         if (selectedOption == correctOption) {
           score += 1;
-          console.log("correct");
         } else {
-          console.log("incorrect");
           incorrectQuestions.push(questionArrayIndex);
         }
       }
     }
-    console.log(score);
-    console.log(incorrectQuestions);
 
     const results = { score: score, incorrectQuestions: incorrectQuestions };
-    console.log(results);
     dispatch({ type: SEND_RESULTS, payload: results });
   };
   return (
     <>
       <form onSubmit={checkAnswers}>
-        {questions.map((question, questionIndex) => {
+        {topicQuestions.map((question, questionIndex) => {
           return (
             <>
               <h3>{question.question}</h3>
