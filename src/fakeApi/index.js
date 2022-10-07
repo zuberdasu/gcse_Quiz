@@ -427,43 +427,88 @@ export const topics = [
       },
 
       {
-        question: "",
+        question: "A virus is a...",
 
-        answers: ["", "", "", ""],
-
-        correct: 1,
-      },
-
-      {
-        question: "",
-
-        answers: ["", "", "", ""],
+        answers: [
+          "program which runs hardware and software",
+          "a program that can replicate itself",
+          "a type of social engineering",
+          "type of operating system stored in the BIOS",
+        ],
 
         correct: 1,
       },
 
       {
-        question: "",
+        question: "Data travels across networks in",
 
-        answers: ["", "", "", ""],
+        answers: ["Parcels", "Parts", "Bit rates", "Packets"],
+
+        correct: 3,
+      },
+
+      {
+        question:
+          "An SQL injection attack would give the attacker unauthorised access to",
+
+        answers: ["Network settings", "Emails", "A database", "Hardware"],
+
+        correct: 2,
+      },
+
+      {
+        question:
+          "What process explores vulnerabilities of computer systems and reporting of this in to an organisation",
+
+        answers: [
+          "Penetration testing",
+          "Packet Tracing",
+          "Defragmentation",
+          "System backup and restoration",
+        ],
+
+        correct: 0,
+      },
+
+      {
+        question:
+          "A user gaining access to a system or intercepting user data without permission would be breaching which law?",
+
+        answers: [
+          "Data Protection Act",
+          "Regulation of Investigatory Powers Act (RIPA)",
+          "Investigatory Powers Act",
+          "Computer Misuse Act",
+        ],
+
+        correct: 3,
+      },
+    ],
+
+    systems: [
+      {
+        question:
+          "Which part of the CPU is responsible for making calculations?",
+
+        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
 
         correct: 1,
       },
 
       {
-        question: "",
+        question: "Which component is used to hold the BIOS?",
 
-        answers: ["", "", "", ""],
+        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
 
-        correct: 1,
+        correct: 3,
       },
 
       {
-        question: "",
+        question: "Which of the following is an example of an embedded system?",
 
-        answers: ["", "", "", ""],
+        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
 
-        correct: 1,
+        correct: 0,
       },
     ],
 

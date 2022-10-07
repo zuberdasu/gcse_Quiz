@@ -22,6 +22,9 @@ const Results = () => {
     case "networks":
       topicQuestions = questions[0].networks;
       break;
+    case "security":
+      topicQuestions = questions[0].networks;
+      break;
 
     default:
       break;
@@ -37,31 +40,33 @@ const Results = () => {
 
   return (
     <>
+      <Navigation></Navigation>
       <h1>You scored {`${results.score}`}</h1>
       <h3>Questions not answered correctly</h3>
 
       {filtered.map((question, questionIndex) => {
         return (
-          <>
+          <div className="questionContainer">
             <h3>{question.question}</h3>
             {question.answers.map((answer, index) => {
               return (
                 <>
-                  <label>{answer}</label>
-                  <input
-                    type="radio"
-                    name={questionIndex}
-                    value={index}
-                    disabled="{true}"
-                  ></input>
+                  <label>
+                    <input
+                      type="radio"
+                      name={questionIndex}
+                      value={index}
+                      disabled="true"
+                    ></input>
+                    <i></i>
+                    {answer}
+                  </label>
                 </>
               );
             })}
-          </>
+          </div>
         );
       })}
-
-      <Navigation></Navigation>
     </>
   );
 };

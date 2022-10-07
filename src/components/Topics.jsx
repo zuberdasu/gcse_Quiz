@@ -8,7 +8,7 @@ const Topics = () => {
   return (
     <>
       <h1>Select a topic</h1>
-      <nav>
+      <nav class="topicNav">
         <button
           onClick={() => dispatch({ type: SET_TOPIC, payload: "architecture" })}
         >
@@ -22,7 +22,22 @@ const Topics = () => {
         <button
           onClick={() => dispatch({ type: SET_TOPIC, payload: "networks" })}
         >
-          Computer networks
+          Computer Networks
+        </button>
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "security" })}
+        >
+          Network Security
+        </button>
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "systems" })}
+        >
+          Systems Software
+        </button>
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "impacts" })}
+        >
+          Impacts of Digital Technology
         </button>
       </nav>
 

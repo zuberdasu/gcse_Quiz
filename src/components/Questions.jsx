@@ -18,6 +18,9 @@ const Questions = () => {
     case "networks":
       topicQuestions = questions[0].networks;
       break;
+    case "security":
+      topicQuestions = questions[0].security;
+      break;
 
     default:
       break;
@@ -48,24 +51,28 @@ const Questions = () => {
   };
   return (
     <>
-      <form onSubmit={checkAnswers}>
+      <Navigation></Navigation>
+      <form onSubmit={checkAnswers} className="quizForm">
         {topicQuestions.map((question, questionIndex) => {
           return (
-            <>
+            <div className="questionContainer">
               <h3>{question.question}</h3>
               {question.answers.map((answer, index) => {
                 return (
                   <>
-                    <label>{answer}</label>
-                    <input
-                      type="radio"
-                      name={questionIndex}
-                      value={index}
-                    ></input>
+                    <label>
+                      <input
+                        type="radio"
+                        name={questionIndex}
+                        value={index}
+                      ></input>
+                      <i></i>
+                      {answer}
+                    </label>
                   </>
                 );
               })}
-            </>
+            </div>
           );
         })}
         <button>Submit Answers</button>

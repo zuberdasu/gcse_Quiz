@@ -15,12 +15,19 @@ const App = () => {
     setLoading(false);
   };
 
+  //after two seconds set loading to false
+  useEffect(() => {
+    setTimeout(() => {
+      setInterface();
+    }, 1000);
+  }, []);
+
   return (
     <>
-      <button onClick={() => localStorage.clear()}>Clear localStorage</button>
+      {/*<button onClick={() => localStorage.clear()}>Clear localStorage</button>*/}
       <h1>GCSE Quiz</h1>
       {loading ? <Startup /> : <Interface />}
-      <button onClick={setInterface}>Continue</button>
+      {/*<button onClick={setInterface}>Continue</button>*/}
     </>
   );
 };

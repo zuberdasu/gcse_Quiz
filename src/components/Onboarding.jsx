@@ -8,16 +8,27 @@ const Onboarding = () => {
 
   return (
     <>
-      <h1>Onboarding</h1>
-      <input onInput={(e) => setUserName(e.target.value)} type="text" />
-      <button
-        onClick={() => {
-          dispatch({ type: ADD_USER, payload: userName });
-          setUserName("");
-        }}
-      >
-        Login
-      </button>
+      <form className="loginForm">
+        <h3>Sign In</h3>
+        <input
+          onInput={(e) => setUserName(e.target.value)}
+          type="text"
+          placeholder="Enter Username"
+        />
+        <input
+          onInput={(e) => setUserName(e.target.value)}
+          type="password"
+          placeholder="Enter Password"
+        />
+        <button
+          onClick={() => {
+            dispatch({ type: ADD_USER, payload: userName });
+            setUserName("");
+          }}
+        >
+          Login
+        </button>
+      </form>
     </>
   );
 };
