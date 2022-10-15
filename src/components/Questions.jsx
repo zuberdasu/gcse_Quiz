@@ -21,6 +21,27 @@ const Questions = () => {
     case "security":
       topicQuestions = questions[0].security;
       break;
+    case "systems":
+      topicQuestions = questions[0].systems;
+      break;
+    case "impacts":
+      topicQuestions = questions[0].impacts;
+      break;
+    case "algorithms":
+      topicQuestions = questions[0].algorithms;
+      break;
+    case "programming":
+      topicQuestions = questions[0].programming;
+      break;
+    case "robustPrograms":
+      topicQuestions = questions[0].robustPrograms;
+      break;
+    case "boolean":
+      topicQuestions = questions[0].boolean;
+      break;
+    case "languages":
+      topicQuestions = questions[0].languages;
+      break;
 
     default:
       break;
@@ -29,8 +50,11 @@ const Questions = () => {
   const dispatch = useDispatch();
 
   const checkAnswers = (e) => {
+    console.log(e.target.elements);
     e.preventDefault();
     let incorrectQuestions = [];
+    let correctQuestions = [];
+
     let score = 0;
     for (let index = 0; index < e.target.elements.length; index++) {
       if (e.target.elements[index].checked) {
@@ -40,13 +64,18 @@ const Questions = () => {
           topicQuestions[e.target.elements[index].name].correct;
         if (selectedOption == correctOption) {
           score += 1;
+          correctQuestions.push(questionArrayIndex);
         } else {
           incorrectQuestions.push(questionArrayIndex);
         }
       }
     }
 
-    const results = { score: score, incorrectQuestions: incorrectQuestions };
+    const results = {
+      score: score,
+      incorrectQuestions: incorrectQuestions,
+      correctQuestions: correctQuestions,
+    };
     dispatch({ type: SEND_RESULTS, payload: results });
   };
   return (

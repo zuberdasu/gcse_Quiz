@@ -8,7 +8,8 @@ const Topics = () => {
   return (
     <>
       <h1>Select a topic</h1>
-      <nav class="topicNav">
+      <h2>Computer Systems</h2>
+      <nav className="topicNav">
         <button
           onClick={() => dispatch({ type: SET_TOPIC, payload: "architecture" })}
         >
@@ -38,6 +39,37 @@ const Topics = () => {
           onClick={() => dispatch({ type: SET_TOPIC, payload: "impacts" })}
         >
           Impacts of Digital Technology
+        </button>
+      </nav>
+      <h2>Computational Thinking, Algorithms and Programming</h2>
+
+      <nav className="topicNav">
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "algorithms" })}
+        >
+          Algorithms
+        </button>
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "programming" })}
+        >
+          Programming Fundamentals
+        </button>
+        <button
+          onClick={() =>
+            dispatch({ type: SET_TOPIC, payload: "robustPrograms" })
+          }
+        >
+          Producing Robust Programs
+        </button>
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "boolean" })}
+        >
+          Boolean Logic
+        </button>
+        <button
+          onClick={() => dispatch({ type: SET_TOPIC, payload: "languages" })}
+        >
+          Programming Languages
         </button>
       </nav>
 

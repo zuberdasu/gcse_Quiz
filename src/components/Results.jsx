@@ -13,7 +13,6 @@ const Results = () => {
 
   switch (selectedTopic) {
     case "architecture":
-      console.log("architecture");
       topicQuestions = questions[0].architecture;
       break;
     case "memory":
@@ -25,15 +24,49 @@ const Results = () => {
     case "security":
       topicQuestions = questions[0].networks;
       break;
+    case "systems":
+      topicQuestions = questions[0].systems;
+      break;
+    case "impacts":
+      topicQuestions = questions[0].impacts;
+      break;
+    case "algorithms":
+      topicQuestions = questions[0].algorithms;
+      break;
+    case "programming":
+      topicQuestions = questions[0].programming;
+      break;
+    case "robustPrograms":
+      topicQuestions = questions[0].robustPrograms;
+      break;
+    case "boolean":
+      topicQuestions = questions[0].boolean;
+      break;
+    case "languages":
+      topicQuestions = questions[0].languages;
+      break;
 
     default:
       break;
   }
 
-  const filtered = topicQuestions.filter((question, index) => {
-    console.log(question, index);
-    console.log(results.incorrectQuestions);
+  const filteredIncorrect = topicQuestions.filter((question, index) => {
     if (results.incorrectQuestions.includes(String(index))) {
+      return true;
+    }
+  });
+
+  const filteredCorrect = topicQuestions.filter((question, index) => {
+    if (results.correctQuestions.includes(String(index))) {
+      return true;
+    }
+  });
+
+  let filteredUnanswered = topicQuestions.filter((question, index) => {
+    if (
+      !results.correctQuestions.includes(String(index)) &&
+      !results.incorrectQuestions.includes(String(index))
+    ) {
       return true;
     }
   });
@@ -44,7 +77,59 @@ const Results = () => {
       <h1>You scored {`${results.score}`}</h1>
       <h3>Questions not answered correctly</h3>
 
-      {filtered.map((question, questionIndex) => {
+      {filteredIncorrect.map((question, questionIndex) => {
+        return (
+          <div className="questionContainer">
+            <h3>{question.question}</h3>
+            {question.answers.map((answer, index) => {
+              return (
+                <>
+                  <label>
+                    <input
+                      type="radio"
+                      name={questionIndex}
+                      value={index}
+                      disabled="true"
+                    ></input>
+                    <i></i>
+                    {answer}
+                  </label>
+                </>
+              );
+            })}
+          </div>
+        );
+      })}
+
+      <h3>Questions answered correctly</h3>
+
+      {filteredCorrect.map((question, questionIndex) => {
+        return (
+          <div className="questionContainer">
+            <h3>{question.question}</h3>
+            {question.answers.map((answer, index) => {
+              return (
+                <>
+                  <label>
+                    <input
+                      type="radio"
+                      name={questionIndex}
+                      value={index}
+                      disabled="true"
+                    ></input>
+                    <i></i>
+                    {answer}
+                  </label>
+                </>
+              );
+            })}
+          </div>
+        );
+      })}
+
+      <h3>Questions not answered</h3>
+
+      {filteredUnanswered.map((question, questionIndex) => {
         return (
           <div className="questionContainer">
             <h3>{question.question}</h3>

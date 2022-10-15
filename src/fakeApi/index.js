@@ -487,190 +487,749 @@ export const topics = [
 
     systems: [
       {
-        question:
-          "Which part of the CPU is responsible for making calculations?",
+        question: "The following is not a type of systems software",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+        answers: [
+          "Device Drivers",
+          "Utility Programs",
+          "Applications",
+          "Operating Systems",
+        ],
 
-        correct: 1,
+        correct: 2,
       },
-
       {
-        question: "Which component is used to hold the BIOS?",
+        question:
+          "Which type of User Interface is text based and requires the user to write commands?",
 
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+        answers: [
+          "Command Line Interface",
+          "Graphical User Interface",
+          "Menu Interface",
+          "No User Interface",
+        ],
+
+        correct: 0,
+      },
+      {
+        question:
+          "Operating Systems will allocate sections of RAM to the processes as part of: ",
+
+        answers: [
+          "Processor Management",
+          "File Management",
+          "Peripheral Management",
+          "Memory Management",
+        ],
 
         correct: 3,
       },
-
       {
-        question: "Which of the following is an example of an embedded system?",
+        question:
+          "This piece of software is used to control hardware devices and allow an operating system to make use of the hardware ",
 
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: [
+          "Device Management",
+          "Device Driver",
+          "Device System",
+          "Hardware Peripheral Device",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "The following is an example of a peripheral",
+
+        answers: ["Processor", "Main Memory (RAM)", "Hard Disk Drive", "ROM"],
+
+        correct: 2,
+      },
+      {
+        question:
+          "Which Operating System function enables allocation of folders?",
+
+        answers: [
+          "User Interface",
+          "Memory Management",
+          "User Management",
+          "File Management",
+        ],
+
+        correct: 3,
+      },
+      {
+        question:
+          "If an OS has the ability to run more than one program simultaneously what is this called?",
+
+        answers: ["Multihandling", "Multitasking", "Multiuser", "Multitesting"],
+
+        correct: 1,
+      },
+      {
+        question: "To scramble data so that it is unreadable is a form of....?",
+
+        answers: ["Compression", "Encryption", "Backing up", "Defragmentation"],
+
+        correct: 1,
+      },
+      {
+        question: "A fragmented hard drive is one in which.....?",
+
+        answers: [
+          "Program instructions and data are spread across tracks and sectors on the hard disk drive",
+          "Programs and instructions are grouped together to occupy a continuous section of the hard disk drive",
+          "A hard disk drive that has been dropped and broken into lots of pieces",
+          "The hard disk drive is split into portions each representing a different logical drive",
+        ],
 
         correct: 0,
+      },
+      {
+        question: "Lossy Compression is.....?",
+
+        answers: [
+          "Appropriate for use on text",
+          "When some original data is lost, and the original file cannot be re-created",
+          "The original file can be re-created from the compressed file",
+          "Turning the text into a format that only a reader with a key can decrypt it",
+        ],
+
+        correct: 1,
       },
     ],
 
     impacts: [
       {
         question:
-          "Which part of the CPU is responsible for making calculations?",
+          "What does the Data Protection Act give an individual the right to do? ",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+        answers: [
+          "A right to request the data an organisation holds about them without paying a fee",
+          "A right to request the data an organisation holds on them for a fee",
+          "A right to request the data an organisation holds about anyone without paying a fee",
+          "A right to request the data an organisation holds about anyone for a fee",
+        ],
 
         correct: 1,
       },
-
       {
-        question: "Which component is used to hold the BIOS?",
+        question:
+          "Who is responsible for making sure the requirements of the Data Protection Act are upheld in an organisation?",
 
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+        answers: [
+          "The Individual",
+          "The Data Controller",
+          "The Stakeholder",
+          "The Computer Network",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "Why are data centres an environmental issue?",
+
+        answers: [
+          "They are really large",
+          "They consume a lot of power",
+          "They are quite difficult to build",
+          "They employ too many people",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "Which legislation governs the act of hacking?",
+
+        answers: [
+          "The Freedom of Information Act",
+          "The Data Protection Act",
+          "The Creative Commons License",
+          "The Computer Misuse Act",
+        ],
 
         correct: 3,
       },
-
       {
-        question: "Which of the following is an example of an embedded system?",
+        question:
+          "Which categories would the use of in-game purchases fall under?",
 
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: ["Ethical", "Legal", "Cultural", "Environmental"],
 
         correct: 0,
+      },
+      {
+        question: "Which of the following describes internet censorship?",
+
+        answers: [
+          "Access to foreign websites",
+          "Monitoring gambling online",
+          "Monitoring what people access on the internet",
+          "Controlling what people can access on the internet",
+        ],
+
+        correct: 3,
+      },
+      {
+        question: "Supplying malware is illegal under which legislation?",
+
+        answers: [
+          "The Computer Misuse Act",
+          "Copyright Designs And Patents Act",
+          "The Data Protection Act",
+          "The Freedom Of Information Act",
+        ],
+
+        correct: 0,
+      },
+      {
+        question:
+          "A doctor’s surgery has medical records of all its patients. Which legislation does this apply to?",
+
+        answers: [
+          "The Computer Misuse Act",
+          "Copyright Designs And Patents Act",
+          "The Data Protection Act",
+          "The Freedom Of Information Act",
+        ],
+
+        correct: 2,
+      },
+      {
+        question: "Which of these best describes an Ethical issue?",
+
+        answers: [
+          "Issues which affect a particular group of people",
+          "What is right and wrong in the eyes of the law",
+          "What is deemed right or wrong by society",
+          "Issues which impact the natural world",
+        ],
+
+        correct: 2,
+      },
+      {
+        question:
+          "Which of the following statements is true about open source software?",
+
+        answers: [
+          "The software cannot be copied, modified or shared",
+          "The software can be copied, modified or shared",
+          "There is normally a cost to pay for a licence to use the software",
+          "The software is not available for public use",
+        ],
+
+        correct: 1,
       },
     ],
 
     algorithms: [
       {
-        question:
-          "Which part of the CPU is responsible for making calculations?",
+        question: "Identify the description of a linear search",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+        answers: [
+          "Put the elements in order, start at the first item, check each item in turn",
+          "Put the elements in order, compare to the middle value, split the list in order and repeat",
+          "Elements do not need to be in order, check each item in turn",
+          "Elements do not need to be in order, compare to the middle value, split the list in order and repeat",
+        ],
 
-        correct: 1,
+        correct: 2,
       },
-
       {
-        question: "Which component is used to hold the BIOS?",
+        question: "Define the term abstraction within computational thinking:",
 
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+        answers: [
+          "Adding together numbers",
+          "Adding additional levels of detail to a problem to define it",
+          "Performing multiple calculations on a list of variables",
+          "Removing unnecessary details from a problem",
+        ],
 
         correct: 3,
       },
-
       {
-        question: "Which of the following is an example of an embedded system?",
+        question: "Which error may produce unexpected results in a program?",
 
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: ["Linear", "Sum", "Logic", "Syntax"],
+
+        correct: 2,
+      },
+      {
+        question:
+          "A linear search is to be performed on the list - 12 6 8 1 3. How many comparisons would it take to find the number 1?",
+
+        answers: ["1", "2", "3", "4"],
+
+        correct: 3,
+      },
+      {
+        question:
+          "A binary search is to be performed on the numbers - 3 5 9 10 23. How many comparisons would it take to find the number 9?",
+
+        answers: ["1", "2", "4", "9 cannot be found"],
 
         correct: 0,
+      },
+      {
+        question:
+          "A binary search is to be performed on the following numbers - 1 5 10 13 48 68 100 101. How many comparisons would it take to the find the number 101?",
+
+        answers: ["1", "2", "3", "4"],
+
+        correct: 3,
+      },
+      {
+        question: "Which error may stop a program from compiling?",
+
+        answers: [
+          "Logic errors",
+          "Input errors",
+          "Run time errors",
+          "Syntax errors",
+        ],
+
+        correct: 3,
+      },
+      {
+        question: "Which term is part of computational thinking?",
+
+        answers: [
+          "Using a computer",
+          "Developing an algorithm to solve a problem",
+          "Making a computer use artificial intelligence",
+          "Google is computational thinking",
+        ],
+
+        correct: 1,
+      },
+      {
+        question:
+          "Define the term decomposition within computational thinking.",
+
+        answers: [
+          "The breaking down of a program until it no longer exists",
+          "The creation of music that can be played on a computer",
+          "The breaking down of a problem into smaller problems",
+          "Adding detail to a solution to make it more complex",
+        ],
+
+        correct: 2,
+      },
+      {
+        question:
+          "If an unsorted list contains 8 numbers how many passes of a bubble sort will be required to sort the list? ",
+
+        answers: ["4", "7", "8", "9"],
+
+        correct: 2,
       },
     ],
 
     programming: [
       {
-        question:
-          "Which part of the CPU is responsible for making calculations?",
+        question: "Consider the following expression: a = b. This means",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
-
-        correct: 1,
-      },
-
-      {
-        question: "Which component is used to hold the BIOS?",
-
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+        answers: [
+          "a will always be equal to b",
+          "b is being renamed into a",
+          "The value of memory location a gets copied into memory location b",
+          "The value of memory location b gets copied into memory location a",
+        ],
 
         correct: 3,
       },
-
       {
-        question: "Which of the following is an example of an embedded system?",
+        question: "Whole numbers are best stored using this data type",
 
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: ["Boolean", "Character", "Integer", "Real"],
+
+        correct: 2,
+      },
+      {
+        question: "Casting refers to",
+
+        answers: [
+          "Boolean algebra",
+          "Rounding of reals",
+          "Converting data to a different type",
+          "Printing out of the program’s results",
+        ],
+
+        correct: 2,
+      },
+      {
+        question: "This operator finds the remainder after integer division",
+
+        answers: ["Integer division", "MOD", "Division", "Subtraction"],
+
+        correct: 1,
+      },
+      {
+        question: "Variable scope refers to",
+
+        answers: [
+          "Variable data type",
+          "Variable identifier",
+          "Logic errors associated with a variable",
+          "The visibility of variables within a program ",
+        ],
+
+        correct: 3,
+      },
+      {
+        question: "The main difference between procedures and functions is",
+
+        answers: [
+          "Procedures are usually longer and have more instructions",
+          "Functions use parameter passing, while procedures don’t",
+          "Functions are more difficult to debug",
+          "Functions may return values, while procedures don’t",
+        ],
+
+        correct: 3,
+      },
+      {
+        question:
+          "Trying to use a local variable from outside its scope will cause",
+
+        answers: [
+          "A global variable to be overwritten by it",
+          "A wrong procedure to run",
+          "An error when compiling",
+          "A logical error",
+        ],
+
+        correct: 2,
+      },
+      {
+        question: "The purpose of SELECT * FROM Pupils WHERE Result >90 is",
+
+        answers: [
+          "To set every Pupil’s result to 90",
+          "To retrieve all the fields from the ‘Pupils’ table but only those where the result is 90",
+          "To retrieve all the fields from the ‘Pupils’ table but only those where the result is greater than 90",
+          "To retrieve all the fields from the ‘Pupils’ table but only those where the name is greater than 90",
+        ],
+
+        correct: 2,
+      },
+      {
+        question: "The following is not a valid file open mode:",
+
+        answers: ["Delete", "Append", "Read", "Write"],
 
         correct: 0,
+      },
+      {
+        question: "else if keyword is used when",
+
+        answers: [
+          "Selection needs to work with more than three choices",
+          "Selection needs to work with more than two choices",
+          "Using 'case select' statements",
+          "Using conditional loops",
+        ],
+
+        correct: 1,
       },
     ],
 
     robustPrograms: [
       {
-        question:
-          "Which part of the CPU is responsible for making calculations?",
+        question: "What does a range check do?",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+        answers: [
+          "Checks data is of the right type",
+          "Checks the data is between set values",
+          "Sorts numbers into ascending order",
+          "Checks that the data is in the correct format",
+        ],
 
         correct: 1,
       },
-
       {
-        question: "Which component is used to hold the BIOS?",
+        question: "What is an example of maintainability? ",
 
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+        answers: [
+          "Checking programs work",
+          "Making your code easy to follow, for example, with comments",
+          "Testing a program for errors",
+          "Training staff to use the program correctly",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "Which of these is not a method for authenticating a user?",
+
+        answers: [
+          "Biometrics",
+          "Password and Username",
+          "Finger print scanner",
+          "Encryption ",
+        ],
 
         correct: 3,
       },
-
       {
-        question: "Which of the following is an example of an embedded system?",
+        question: "How do sub programs improve maintainability?",
 
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: [
+          "By returning a value",
+          "Gives the program structure",
+          "Carrying out a set of instructions",
+          "Calling procedure name",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "When is terminal testing carried out?",
+
+        answers: [
+          "Before you start",
+          "After all code has been written",
+          "During the project",
+          "After the design section",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "What is iterative testing?",
+
+        answers: [
+          "Testing completed after an error is found",
+          "Random tests on a computer program",
+          "Tests used to inform development",
+          "Tests only completed once all code is written",
+        ],
+
+        correct: 2,
+      },
+      {
+        question: "Which of these is not used in a test plan?",
+
+        answers: [
+          "Valid Data",
+          "Boundary Data",
+          "Erroneous Data",
+          "Average Data",
+        ],
+
+        correct: 3,
+      },
+      {
+        question: "What is the generic name given to an error found in code?",
+
+        answers: ["Bugs", "Validation", "Syntax", "Compilers"],
 
         correct: 0,
+      },
+      {
+        question: "What is a breakpoint?",
+
+        answers: [
+          "The point at which a program breaks",
+          "A feature within an IDE to stop a program at a certain line",
+          "The point in a program where an error is found",
+          "The point at which the coder is frustrated with the program",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "What is the purpose of testing?",
+
+        answers: [
+          "To identify errors",
+          "To identify issues that may occur when a customer uses the program",
+          "To test the security of the program",
+          "All of the above",
+        ],
+
+        correct: 3,
       },
     ],
 
     boolean: [
       {
-        question:
-          "Which part of the CPU is responsible for making calculations?",
+        question: "What is the output of an OR gate if the inputs are 1 and 0?",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+        answers: ["0", "1", "OFF", "2"],
 
         correct: 1,
       },
-
       {
-        question: "Which component is used to hold the BIOS?",
+        question:
+          "What is the output of an AND gate if the inputs are 1 and 0?",
 
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
+        answers: ["ON", "2", "1", "0"],
 
         correct: 3,
       },
-
       {
-        question: "Which of the following is an example of an embedded system?",
+        question: "What is the output of a NOT gate if the input is 0?",
 
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: ["1", "0", "OFF", "2"],
 
         correct: 0,
+      },
+      {
+        question: "A NOT gate has",
+
+        answers: [
+          "Two inputs and one output",
+          "One input and one output",
+          "One input and two outputs",
+          "Two inputs and two outputs",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "An OR gate has",
+
+        answers: [
+          "Two inputs and one output",
+          "One input and one output",
+          "One input and two outputs",
+          "Two inputs and two outputs",
+        ],
+
+        correct: 0,
+      },
+      {
+        question: "The output of a logic gate can be in one of two",
+
+        answers: ["Gates", "States", "Inputs", "Outputs"],
+
+        correct: 1,
+      },
+      {
+        question: "A logic state can only be",
+
+        answers: ["On or 1", "Off or 0", "1 or 0", "In and Out"],
+
+        correct: 2,
+      },
+      {
+        question: "The output of this gate is only 1 when both inputs are 1",
+
+        answers: ["OR", "NOT", "NAND", "AND"],
+
+        correct: 3,
+      },
+      {
+        question: "A NAND gate is the combination of which two gates",
+
+        answers: ["OR and AND", "AND and NOT", "NOT and OR", "OR and NAND"],
+
+        correct: 1,
+      },
+      {
+        question: "A NOR gate is the combination of which two gates",
+
+        answers: ["OR and AND", "AND and NOT", "NOT and OR", "OR and NAND"],
+
+        correct: 2,
       },
     ],
 
     languages: [
       {
         question:
-          "Which part of the CPU is responsible for making calculations?",
+          "Machine code is used in which generation of a programming language?",
 
-        answers: ["Program counter", "ALU", "Accumulator", "MAR"],
+        answers: [
+          "1st Generation",
+          "2nd Generation",
+          "3rd Generation",
+          "4th Generation",
+        ],
+
+        correct: 0,
+      },
+      {
+        question: "Which of these is an example of a low-level language?",
+
+        answers: ["Delphi", "LMC", "Basic", "C#"],
 
         correct: 1,
       },
-
       {
-        question: "Which component is used to hold the BIOS?",
+        question:
+          "An advantage of programming in a high-level programming language is",
 
-        answers: ["Hard Disk", "RAM", "SSD", "ROM"],
-
-        correct: 3,
-      },
-
-      {
-        question: "Which of the following is an example of an embedded system?",
-
-        answers: ["Washing machine", "Laptop", "Desktop", "Games console"],
+        answers: [
+          "Uses natural language and so can be easier to read/understand",
+          "Useful for device drivers",
+          "The final file size is smaller",
+          "Programs run more quickly at runtime",
+        ],
 
         correct: 0,
+      },
+      {
+        question:
+          "What sort of relationship are low-level languages said to have with high-level languages?",
+
+        answers: [
+          "One to One (One high level instruction is equivalent to one low level)",
+          "One to Two (For every high level instruction there are two low level instructions)",
+          "One to many (For every high level instruction there are many low level instructions)",
+          "Many to One (Many high level instructions translate into one low level instruction)",
+        ],
+
+        correct: 2,
+      },
+      {
+        question: "What is meant by source code?",
+
+        answers: [
+          "The final executable program",
+          "The code written by the programmer",
+          "The additional information about errors",
+          "Code relating to sources of information on the Internet",
+        ],
+
+        correct: 1,
+      },
+      {
+        question: "Nearly all IDEs will have this to manipulate source code",
+
+        answers: ["Text Editor", "Debugger", "Compiler"],
+
+        correct: 0,
+      },
+      {
+        question: "Helps identify and fix errors in code ",
+
+        answers: ["Text Editor", "Debugger", "Compiler"],
+
+        correct: 1,
+      },
+      {
+        question:
+          "Translates source code from a high-level language to a lower level language",
+
+        answers: ["Text Editor", "Debugger", "Compiler"],
+
+        correct: 2,
+      },
+      {
+        question: "Which one would I be using if I had syntax highlighting? ",
+
+        answers: ["Text Editor", "Debugger", "Compiler"],
+
+        correct: 0,
+      },
+      {
+        question:
+          "Which feature translates the source code in the code editor?",
+
+        answers: ["Text Editor", "Debugger", "Compiler"],
+
+        correct: 2,
       },
     ],
   },
