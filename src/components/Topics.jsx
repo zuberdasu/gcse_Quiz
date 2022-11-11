@@ -7,6 +7,7 @@ const Topics = () => {
   const dispatch = useDispatch();
   return (
     <>
+      <Navigation></Navigation>
       <h1>Select a topic</h1>
       <h2>Computer Systems</h2>
       <nav className="topicNav">
@@ -72,8 +73,6 @@ const Topics = () => {
           Programming Languages
         </button>
       </nav>
-
-      <Navigation></Navigation>
     </>
   );
 };

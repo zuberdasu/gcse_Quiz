@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "./Navigation";
+import Timer from "./Timer";
 import { useSelector, useDispatch } from "react-redux";
 import { SEND_RESULTS } from "../redux/types";
 
@@ -81,6 +82,7 @@ const Questions = () => {
   return (
     <>
       <Navigation></Navigation>
+      <Timer></Timer>
       <form onSubmit={checkAnswers} className="quizForm">
         {topicQuestions.map((question, questionIndex) => {
           return (

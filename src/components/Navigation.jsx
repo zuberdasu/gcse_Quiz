@@ -14,8 +14,26 @@ const Navigation = () => {
           >
             Topics
           </button>
+          {screenMode === 4 && (
+            <button
+              onClick={() => dispatch({ type: SET_SCREEN_MODE, payload: 3 })}
+            >
+              Retry
+            </button>
+          )}
+          <button
+            onClick={() => dispatch({ type: SET_SCREEN_MODE, payload: 1 })}
+          >
+            Logout
+          </button>
         </nav>
       </>
+    );
+  } else {
+    return (
+      <button onClick={() => dispatch({ type: SET_SCREEN_MODE, payload: 1 })}>
+        Logout
+      </button>
     );
   }
 };

@@ -74,7 +74,7 @@ const Results = () => {
   return (
     <>
       <Navigation></Navigation>
-      <h1>You scored {`${results.score}`}</h1>
+      <h1>You scored {`${results.score}`} out of 10</h1>
       <h3>Questions not answered correctly</h3>
 
       {filteredIncorrect.map((question, questionIndex) => {
