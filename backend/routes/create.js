@@ -5,6 +5,8 @@ const router = express.Router();
 const sha256 = require("sha256");
 
 router.post("/", async (req, res) => {
+  console.log("create request received");
+  console.log(req.body);
   let { name, email, password } = req.body;
 
   //check we have all the data

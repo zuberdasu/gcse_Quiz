@@ -3,6 +3,8 @@ const asyncMySQL = require("./mysql/connection");
 const checkDBStatus = require("./tests/sql");
 const express = require("express"); //the import
 const app = express(); //create an instance
+const cors = require("cors");
+app.use(cors());
 //const { simpsons } = require("./data/simpsons");
 //const { checkToken } = require("./middleware/auth");
 //const { getUniqueId } = require("./utils");
@@ -36,7 +38,7 @@ app.use((req, res, next) => {
 
 //route middleware
 //app.use("/delete", require("./routes/delete"));
-//app.use("/read", require("./routes/read"));
+app.use("/read", require("./routes/read"));
 app.use("/create", require("./routes/create"));
 //app.use("/update", require("./routes/update"));
 app.use("/login", require("./routes/login"));

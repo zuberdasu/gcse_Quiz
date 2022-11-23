@@ -9,6 +9,7 @@ import {
   ADD_USER,
   SEND_RESULTS,
   SET_TOPIC,
+  SET_API_DATA,
 } from "./types";
 
 const datafromDisk = getItem("store");
@@ -71,6 +72,8 @@ export function reducer(state = initialState, action) {
       };
       return newState;
     }
+    case SET_API_DATA:
+      return { ...state, topics: action.payload };
 
     default:
       return state;

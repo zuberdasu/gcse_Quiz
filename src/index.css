@@ -109,3 +109,9 @@ button:hover {
   background-color: #cbea00;
   box-sizing: border-box;
 }
+
+/*.stickyTop {
+  position: sticky;
+  top: 0px;
+  background-color: #94c0e8;
+}*/

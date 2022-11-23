@@ -11,7 +11,7 @@ const Timer = () => {
     //if (timeleft > 0) {
     setTimeout(() => {
       progress(timeleft - 1, timetotal);
-      console.log(progress, timeleft);
+      //console.log(progress, timeleft);
     }, 1000);
   };
   //};

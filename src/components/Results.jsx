@@ -9,46 +9,56 @@ const Results = () => {
 
   const questions = useSelector((state) => state.topics);
 
-  let topicQuestions = {};
+  let topicQuestions = [];
+  let keys = [];
+  let values = [];
 
-  switch (selectedTopic) {
-    case "architecture":
-      topicQuestions = questions[0].architecture;
-      break;
-    case "memory":
-      topicQuestions = questions[0].memory;
-      break;
-    case "networks":
-      topicQuestions = questions[0].networks;
-      break;
-    case "security":
-      topicQuestions = questions[0].networks;
-      break;
-    case "systems":
-      topicQuestions = questions[0].systems;
-      break;
-    case "impacts":
-      topicQuestions = questions[0].impacts;
-      break;
-    case "algorithms":
-      topicQuestions = questions[0].algorithms;
-      break;
-    case "programming":
-      topicQuestions = questions[0].programming;
-      break;
-    case "robustPrograms":
-      topicQuestions = questions[0].robustPrograms;
-      break;
-    case "boolean":
-      topicQuestions = questions[0].boolean;
-      break;
-    case "languages":
-      topicQuestions = questions[0].languages;
-      break;
-
-    default:
-      break;
+  for (let i = 0; i < questions.length; i++) {
+    keys = Object.keys(questions[i]);
+    if (keys[0] === selectedTopic) {
+      values = Object.values(questions[i]);
+      topicQuestions = values[0];
+    }
   }
+
+  // switch (selectedTopic) {
+  //   case "architecture":
+  //     topicQuestions = questions.result[0];
+  //     break;
+  //   case "memory":
+  //     topicQuestions = questions[0].memory;
+  //     break;
+  //   case "networks":
+  //     topicQuestions = questions[0].networks;
+  //     break;
+  //   case "security":
+  //     topicQuestions = questions[0].networks;
+  //     break;
+  //   case "systems":
+  //     topicQuestions = questions[0].systems;
+  //     break;
+  //   case "impacts":
+  //     topicQuestions = questions[0].impacts;
+  //     break;
+  //   case "algorithms":
+  //     topicQuestions = questions[0].algorithms;
+  //     break;
+  //   case "programming":
+  //     topicQuestions = questions[0].programming;
+  //     break;
+  //   case "robustPrograms":
+  //     topicQuestions = questions[0].robustPrograms;
+  //     break;
+  //   case "boolean":
+  //     topicQuestions = questions[0].boolean;
+  //     break;
+  //   case "languages":
+  //     topicQuestions = questions[0].languages;
+  //     break;
+
+  //   default:
+  //     break;
+  // }
 
   const filteredIncorrect = topicQuestions.filter((question, index) => {
     if (results.incorrectQuestions.includes(String(index))) {

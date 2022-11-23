@@ -26,6 +26,17 @@ const queries = {
     return `DELETE FROM logins
                 WHERE token = "${token}";`;
   },
+  getQuestions: (topic) => {
+    return `SELECT name, question, questions.id
+              FROM topics
+                JOIN questions ON
+                  topics.id = questions.topic_id;`;
+  },
 };
 
 module.exports = queries;
+
+// WHERE topics.name = "${topic}";`;
+//JOIN answers ON
+//                    questions.id = answers.question_id;`;
+//

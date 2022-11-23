@@ -6,3 +6,4 @@ export const SET_LOADING = "SET_LOADING";
 
 export const SEND_RESULTS = "SEND_RESULTS";
 export const SET_TOPIC = "SET_TOPIC";
+export const SET_API_DATA = "SET_API_DATA";
