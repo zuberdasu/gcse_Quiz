@@ -11,7 +11,8 @@ const App = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  const url = `http://localhost:6001/read`;
+  //const url = `http://localhost:6001/read`;
+  const url = `https://api.zuberdasu.co.uk/read/`;
 
   const getApiData = async () => {
     try {

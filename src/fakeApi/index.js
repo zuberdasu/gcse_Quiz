@@ -260,7 +260,7 @@ export const topics = [
           "A client-server network has a central computer that provides services to the rest of the network",
           "A client-server network is cheap and easy to set up",
           "A client-server network cannot be used to share files",
-          "Each computer on a client-server network is maintain separately",
+          "Each computer on a client-server network is maintained separately",
         ],
 
         correct: 0,
@@ -431,8 +431,8 @@ export const topics = [
 
         answers: [
           "program which runs hardware and software",
-          "a program that can replicate itself",
-          "a type of social engineering",
+          "program that can replicate itself",
+          "type of social engineering",
           "type of operating system stored in the BIOS",
         ],
 
