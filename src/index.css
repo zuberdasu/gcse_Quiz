@@ -110,8 +110,8 @@ button:hover {
   box-sizing: border-box;
 }
 
-/*.stickyTop {
+.stickyTop {
   position: sticky;
   top: 0px;
   background-color: #94c0e8;
-}*/
+}
