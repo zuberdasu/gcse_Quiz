@@ -37,20 +37,8 @@ export function reducer(state = initialState, action) {
       if (!action.payload) {
         return state;
       }
-      console.log(action.payload.userName);
       //const url = `https://api.zuberdasu.co.uk/login/`;
       const url = `http://localhost:6001/login`;
-
-      const params = { email: "dzd@zd.com", password: "password" };
-
-      // try {
-      //   const result = axios.post(url, params);
-      //   console.log("19", result);
-      //   // dispatch({ type: SET_API_DATA, payload: result.data.result });
-      //   //
-      // } catch (error) {
-      //   console.log("Error from API", error);
-      // }
 
       const user = {
         //id: generateRandomId(20),
