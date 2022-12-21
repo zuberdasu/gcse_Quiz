@@ -6,6 +6,7 @@ import Results from "./Results";
 import Onboarding from "./Onboarding";
 
 import { useSelector } from "react-redux";
+import Registration from "./Registration";
 
 const Interface = () => {
   const screenMode = useSelector((state) => state.screenMode);
@@ -15,6 +16,7 @@ const Interface = () => {
       {screenMode === 2 && <Topics />}
       {screenMode === 3 && <Questions />}
       {screenMode === 4 && <Results />}
+      {screenMode === 5 && <Registration />}
     </>
   );
 };

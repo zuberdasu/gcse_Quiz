@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { ADD_USER } from "../redux/types";
+import { ADD_LOGIN_TOKEN, SET_SCREEN_MODE } from "../redux/types";
 import axios from "axios";
 
 const login = async (params) => {
@@ -15,6 +15,12 @@ const login = async (params) => {
     console.log("Error from API", error);
   }
 };
+
+// const register = (e) => {
+//   e.preventDefault();
+//   console.log("register called");
+//   dispatch({ type: SET_SCREEN_MODE, payload: 5 });
+// };
 
 const Onboarding = () => {
   const [userName, setUserName] = useState();
@@ -47,8 +53,8 @@ const Onboarding = () => {
               setinvalidCreds(1);
             } else {
               dispatch({
-                type: ADD_USER,
-                payload: { userName, password },
+                type: ADD_LOGIN_TOKEN,
+                payload: result.data.token,
               });
             }
             // setUserName("");
@@ -56,6 +62,17 @@ const Onboarding = () => {
         >
           Login
         </button>
+        <p>Don't have an account?</p>
+        <a
+          href=""
+          onClick={(e) => {
+            e.preventDefault();
+
+            dispatch({ type: SET_SCREEN_MODE, payload: 5 });
+          }}
+        >
+          Register now
+        </a>
       </form>
     </>
   );

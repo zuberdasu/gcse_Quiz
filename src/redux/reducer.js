@@ -6,7 +6,7 @@ import {
   UPDATE_USER,
   DELETE_USER,
   SET_LOADING,
-  ADD_USER,
+  ADD_LOGIN_TOKEN,
   SEND_RESULTS,
   SET_TOPIC,
   SET_API_DATA,
@@ -33,20 +33,11 @@ export function reducer(state = initialState, action) {
       const newState = { ...state, loading: action.payload };
       return newState;
     }
-    case ADD_USER:
-      if (!action.payload) {
-        return state;
-      }
-      //const url = `https://api.zuberdasu.co.uk/login/`;
-      const url = `http://localhost:6001/login`;
-
-      const user = {
-        //id: generateRandomId(20),
-        userName: action.payload,
-      };
-      const newState = { ...state, user, screenMode: 2 };
-      storeItem("store", newState);
+    case ADD_LOGIN_TOKEN: {
+      const newState = { ...state, screenMode: 2 };
+      storeItem("token", { token: action.payload });
       return newState;
+    }
     case UPDATE_USER: {
       const user = { ...state.user };
       user.userName = action.payload.userName;
