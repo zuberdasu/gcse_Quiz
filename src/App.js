@@ -31,18 +31,17 @@ const App = () => {
     setLoading(false);
   };
 
-  //after two seconds set loading to false
+  //after three seconds set loading to false
   useEffect(() => {
     getApiData();
     setTimeout(() => {
       setInterface();
-    }, 1000);
+    }, 3000);
   }, []);
 
   return (
     <>
       {/*<button onClick={() => localStorage.clear()}>Clear localStorage</button>*/}
-      <h1>GCSE Quiz</h1>
       {loading ? <Startup /> : <Interface />}
       {/*<button onClick={setInterface}>Continue</button>*/}
     </>

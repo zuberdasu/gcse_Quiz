@@ -1,9 +1,10 @@
 import React from "react";
+import websiteLogo from "../images/low-resolution-logo.png";
+
 const Startup = () => {
   return (
     <>
-      <h1>Loading...</h1>
-      <p>Copyright 2022</p>
+      <img className="landingPageLogo" src={websiteLogo} alt="Logo"></img>
     </>
   );
 };

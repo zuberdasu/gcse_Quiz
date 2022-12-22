@@ -7,11 +7,13 @@ import Onboarding from "./Onboarding";
 
 import { useSelector } from "react-redux";
 import Registration from "./Registration";
+import Logo from "./Logo";
 
 const Interface = () => {
   const screenMode = useSelector((state) => state.screenMode);
   return (
     <>
+      <Logo></Logo>
       {screenMode === 1 && <Onboarding />}
       {screenMode === 2 && <Topics />}
       {screenMode === 3 && <Questions />}

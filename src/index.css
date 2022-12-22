@@ -116,3 +116,14 @@ button:hover {
   top: 0px;
   background-color: #94c0e8;
 }
+
+.websiteLogo {
+  position: fixed;
+  top: 1%;
+  right: 0%;
+  z-index: 1;
+}
+.landingPageLogo {
+  display: block;
+  margin: auto;
+}
