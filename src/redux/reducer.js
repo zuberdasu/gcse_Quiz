@@ -17,6 +17,18 @@ const datafromDisk = getItem("store");
 
 let initialStateToUse = initialState;
 
+const addScore = async (params) => {
+  try {
+    const url = `http://localhost:6001/addScore`;
+
+    const result = await axios.post(url, params);
+
+    return result;
+  } catch (error) {
+    console.log("Error from API", error);
+  }
+};
+
 if (datafromDisk) {
   initialStateToUse = datafromDisk;
 }
@@ -54,6 +66,14 @@ export function reducer(state = initialState, action) {
     }
 
     case SEND_RESULTS: {
+      const token = getItem("token").token;
+      const params = {
+        token,
+        score: String(action.payload.score),
+        topic: state.selectedTopic,
+      };
+      const result = addScore(params);
+
       const newState = { ...state, results: action.payload, screenMode: 4 };
       return newState;
     }

@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import Navigation from "./Navigation";
 import { useSelector } from "react-redux";
 
 const Results = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const results = useSelector((state) => state.results);
 
   const selectedTopic = useSelector((state) => state.selectedTopic);
