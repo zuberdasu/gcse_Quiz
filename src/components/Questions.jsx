@@ -1,13 +1,27 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Navigation from "./Navigation";
 import Timer from "./Timer";
 import { useSelector, useDispatch } from "react-redux";
 import { SEND_RESULTS } from "../redux/types";
+import { getItem } from "../localStorage";
+import axios from "axios";
+
+const readMaxScore = async (params) => {
+  try {
+    const url = `http://localhost:6001/readScores`;
+    const result = await axios.post(url, params);
+
+    return result;
+  } catch (error) {
+    console.log("Error from API", error);
+  }
+};
 
 const Questions = () => {
   const selectedTopic = useSelector((state) => state.selectedTopic);
   const questions = useSelector((state) => state.topics);
   const questionsFormRef = useRef(null);
+  const [maxScore, setMaxScore] = useState();
 
   let topicQuestions = [];
   let keys = [];
@@ -20,6 +34,23 @@ const Questions = () => {
       topicQuestions = values[0];
     }
   }
+
+  const token = getItem("token").token;
+  const params = {
+    token,
+    topic: selectedTopic,
+  };
+
+  readMaxScore(params).then(
+    (result) => {
+      if (result.data.status === 1) {
+        setMaxScore(result.data.score[0]);
+      }
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   const dispatch = useDispatch();
 
@@ -90,6 +121,7 @@ const Questions = () => {
         <Navigation></Navigation>
         <Timer checkAnswersOnExpire={checkAnswersOnExpire}></Timer>
       </div>
+      {maxScore && <h3>Previous best score: {`${maxScore}`}</h3>}
       <form onSubmit={checkAnswers} className="quizForm" ref={questionsFormRef}>
         {topicQuestions.map((question, questionIndex) => {
           return (
