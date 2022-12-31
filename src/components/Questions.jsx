@@ -121,6 +121,11 @@ const Questions = () => {
         <Navigation></Navigation>
         <Timer checkAnswersOnExpire={checkAnswersOnExpire}></Timer>
       </div>
+      <h2>
+        {`${selectedTopic}`.charAt(0).toUpperCase() +
+          `${selectedTopic}`.slice(1)}
+      </h2>
+
       {maxScore && <h3>Previous best score: {`${maxScore}`}</h3>}
       <form onSubmit={checkAnswers} className="quizForm" ref={questionsFormRef}>
         {topicQuestions.map((question, questionIndex) => {
