@@ -8,7 +8,8 @@ import axios from "axios";
 
 const readMaxScore = async (params) => {
   try {
-    const url = `http://localhost:6001/readScores`;
+    //const url = `http://localhost:6001/readScores`;
+    const url = `https://api.zuberdasu.co.uk/readScores`;
     const result = await axios.post(url, params);
 
     return result;

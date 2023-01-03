@@ -19,7 +19,8 @@ let initialStateToUse = initialState;
 
 const addScore = async (params) => {
   try {
-    const url = `http://localhost:6001/addScore`;
+    //const url = `http://localhost:6001/addScore`;
+    const url = `https://api.zuberdasu.co.uk/addScore`;
 
     const result = await axios.post(url, params);
 

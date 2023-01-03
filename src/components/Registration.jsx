@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { ADD_LOGIN_TOKEN, SET_SCREEN_MODE } from "../redux/types";
 import axios from "axios";
+import { validate } from "../validation";
 
 const register = async (params) => {
   try {
-    const url = `http://localhost:6001/create`;
+    //const url = `http://localhost:6001/create`;
+    const url = `https://api.zuberdasu.co.uk/create`;
 
     const result = await axios.post(url, params);
 
@@ -17,7 +19,8 @@ const register = async (params) => {
 
 const login = async (params) => {
   try {
-    const url = `http://localhost:6001/login`;
+    //const url = `http://localhost:6001/login`;
+    const url = `https://api.zuberdasu.co.uk/login`;
 
     const result = await axios.post(url, params);
 
@@ -33,6 +36,7 @@ const Registration = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [emailUsed, setEmailUsed] = useState(0);
+  const [detailsMissing, setDetailsMissing] = useState(0);
 
   const dispatch = useDispatch();
 
@@ -60,29 +64,45 @@ const Registration = () => {
           type="password"
           placeholder="Enter Password"
         />
+        {detailsMissing === 1 && <p>Please fill in all registration details</p>}
         {emailUsed === 1 && <p>An account with this email already exists</p>}
 
         <button
           onClick={async (e) => {
             e.preventDefault();
-            const result = await register({
+
+            if (detailsMissing) setDetailsMissing(0);
+
+            const vResult = validate(5, {
+              firstName,
+              surname,
+              email,
+              password,
+            });
+
+            if (vResult !== true) {
+              setDetailsMissing(1);
+              return;
+            }
+
+            const rResult = await register({
               first_name: firstName,
               surname,
               email,
               password,
             });
 
-            if (result.data.status === 0) {
+            if (rResult.data.status === 0) {
               setEmailUsed(1);
             } else {
-              const result = await login({ email, password });
+              const lResult = await login({ email, password });
 
-              if (result.data.status === 0) {
+              if (lResult.data.status === 0) {
                 console.log("incorrect login result");
               } else {
                 dispatch({
                   type: ADD_LOGIN_TOKEN,
-                  payload: result.data.token,
+                  payload: lResult.data.token,
                 });
               }
             }
