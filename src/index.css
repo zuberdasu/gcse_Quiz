@@ -67,7 +67,9 @@ i {
 
 .topicNav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .topicNav button,
@@ -87,6 +89,10 @@ button {
   border-radius: 10px;
 }
 
+.topicNav button {
+  flex: 100%;
+}
+
 .topicNav button:hover,
 button:hover {
   background-color: #1e88e5;
@@ -98,7 +104,7 @@ button:hover {
   width: 90%;
   margin: 10px auto;
   height: 22px;
-  background-color: #0a5f44;
+  background-color: #1e88e5;
 }
 
 #progressBar div {
@@ -107,7 +113,7 @@ button:hover {
   /*padding: 0 10px;*/
   line-height: 22px; /* same as #progressBar height if we want text middle aligned */
   width: 0;
-  background-color: #cbea00;
+  background-color: white;
   box-sizing: border-box;
 }
 
@@ -115,6 +121,7 @@ button:hover {
   position: sticky;
   top: 0px;
   background-color: #94c0e8;
+  padding-bottom: 5px;
 }
 
 .websiteLogo {
@@ -126,4 +133,20 @@ button:hover {
 .landingPageLogo {
   display: block;
   margin: auto;
+  height: 75%;
+  width: 75%;
+}
+
+@media screen and (min-width: 481px) {
+  .topicNav button {
+    flex: 40%;
+    max-width: 40%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .topicNav button {
+    flex: 20%;
+    max-width: 20%;
+  }
 }

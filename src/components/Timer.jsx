@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 const Timer = (props) => {
   const [width, setWidth] = useState([100]);
   const progress = (timeleft, timetotal) => {
