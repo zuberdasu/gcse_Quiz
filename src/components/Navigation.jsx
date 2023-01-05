@@ -5,7 +5,7 @@ const Navigation = () => {
   const dispatch = useDispatch();
   const screenMode = useSelector((state) => state.screenMode);
 
-  if (screenMode != 2) {
+  if (screenMode !== 2) {
     return (
       <>
         <nav>
@@ -38,22 +38,3 @@ const Navigation = () => {
   }
 };
 export default Navigation;
-
-{
-  /*screenMode !== 3 && (
-          <button
-            onClick={() => dispatch({ type: SET_SCREEN_MODE, payload: 3 })}
-          >
-            Questions
-          </button>
-        )*/
-}
-{
-  /*screenMode !== 4 && (
-          <button
-            onClick={() => dispatch({ type: SET_SCREEN_MODE, payload: 4 })}
-          >
-            Results
-          </button>
-        )*/
-}

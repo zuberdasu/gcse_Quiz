@@ -49,7 +49,9 @@ const Results = () => {
     <>
       <Navigation></Navigation>
       <h1>You scored {`${results.score}`} out of 10</h1>
-      <h3>Questions not answered correctly</h3>
+      {filteredIncorrect.length !== 0 && (
+        <h3>Questions not answered correctly</h3>
+      )}
 
       {filteredIncorrect.map((question, questionIndex) => {
         return (
@@ -75,7 +77,7 @@ const Results = () => {
         );
       })}
 
-      <h3>Questions answered correctly</h3>
+      {filteredCorrect.length !== 0 && <h3>Questions answered correctly</h3>}
 
       {filteredCorrect.map((question, questionIndex) => {
         return (
@@ -101,7 +103,7 @@ const Results = () => {
         );
       })}
 
-      <h3>Questions not answered</h3>
+      {filteredUnanswered.length !== 0 && <h3>Questions not answered</h3>}
 
       {filteredUnanswered.map((question, questionIndex) => {
         return (
