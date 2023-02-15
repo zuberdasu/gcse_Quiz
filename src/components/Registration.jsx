@@ -6,7 +6,6 @@ import { validate } from "../validation";
 
 const register = async (params) => {
   try {
-    //const url = `http://localhost:6001/create`;
     const url = `https://api.zuberdasu.co.uk/create`;
 
     const result = await axios.post(url, params);
@@ -19,7 +18,6 @@ const register = async (params) => {
 
 const login = async (params) => {
   try {
-    //const url = `http://localhost:6001/login`;
     const url = `https://api.zuberdasu.co.uk/login`;
 
     const result = await axios.post(url, params);

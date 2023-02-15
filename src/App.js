@@ -11,15 +11,12 @@ const App = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  //const url = `http://localhost:6001/read`;
   const url = `https://api.zuberdasu.co.uk/read/`;
 
   const getApiData = async () => {
     try {
       const result = await axios.get(url);
-      console.log("19", result.data.result);
       dispatch({ type: SET_API_DATA, payload: result.data.result });
-      //
     } catch (error) {
       console.log("Error from API", error);
     }
@@ -39,13 +36,7 @@ const App = () => {
     }, 3000);
   }, []);
 
-  return (
-    <>
-      {/*<button onClick={() => localStorage.clear()}>Clear localStorage</button>*/}
-      {loading ? <Startup /> : <Interface />}
-      {/*<button onClick={setInterface}>Continue</button>*/}
-    </>
-  );
+  return <>{loading ? <Startup /> : <Interface />}</>;
 };
 
 export default App;

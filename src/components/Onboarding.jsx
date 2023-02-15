@@ -6,10 +6,8 @@ import { validate } from "../validation";
 
 const login = async (params) => {
   try {
-    //const url = `http://localhost:6001/login`;
     const url = `https://api.zuberdasu.co.uk/login`;
 
-    //const params = { email: "dzd@zd.com", password: "password" };
     const result = await axios.post(url, params);
 
     return result;
@@ -57,7 +55,6 @@ const Onboarding = () => {
                   payload: lResult.data.token,
                 });
               }
-              // setUserName("");
             } else {
               setinvalidCreds(1);
             }

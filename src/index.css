@@ -110,8 +110,7 @@ button:hover {
 #progressBar div {
   height: 100%;
   text-align: right;
-  /*padding: 0 10px;*/
-  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+  line-height: 22px;
   width: 0;
   background-color: white;
   box-sizing: border-box;
